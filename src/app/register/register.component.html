@@ -1,0 +1,47 @@
+<!--header-->
+<app-header></app-header>
+
+
+<!--login-->
+<div class="login-page">
+    
+        <div class="form">
+          
+          <h2>register From</h2>
+          <form  (ngSubmit)="register()"  [formGroup]="registerForm" class="login-form"  >
+            <div class="input-group">
+                <label for="name">Name </label>
+                <input formControlName="name" name="name" type="text"       />
+              </div>
+
+               <!--Innvalid Name-->
+            <div *ngIf="this.registerForm.get('name')?.errors&&this.registerForm.get('name')?.touched"
+            class="text-danger mb-2">Invalid Name </div>
+
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input formControlName="email" name="email" type="text"       />
+            </div>
+            <!--Innvalid email-->
+            <div *ngIf="this.registerForm.get('email')?.errors&&this.registerForm.get('email')?.touched"
+             class="text-danger mb-2">Invalid Email Adress</div>
+
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input formControlName="pswd"   name="pswd"  type="password"     />
+            </div>
+
+             <!--Innvalid password-->
+             <div *ngIf="this.registerForm.get('pswd')?.errors&&this.registerForm.get('pswd')?.touched"
+             class="text-danger mb-2">Invalid Email Adress</div>
+
+    
+            <button  type="submit"  >
+                register
+    
+            </button>
+          </form>
+          <p class="register-link">Have account <a routerLink="/">Login </a></p>
+        </div>
+    
+  </div>

@@ -1,0 +1,66 @@
+<app-header></app-header>
+<body>
+  <div class="center-box">
+    <div class="task-list">
+      <h2>LIST</h2>
+      <div class="list-menu">
+        <!-- list items -->
+        <a  class="list-menu-items" *ngFor="let list of lists || []"   routerLink="./{{list._id}}"      routerLinkActive="is-active" >
+          
+          <p>{{ list.title }}</p>
+        </a>
+      </div>
+      <!-- button to create a new task list -->
+      <button class="btn btn-primary"  routerLink="./new-list" > +New List</button>
+    </div>
+    <div class="task-messages">
+     <div>
+      <div>
+        <h2>TASK</h2>
+        <!-- dropdown menu for editing and deleting the selected task list -->
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-gear"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="./edit-list">
+                <i class="fa-solid fa-pen-to-square"></i>
+                Edit
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" (click)="deleteListClick()">
+                <i class="fa-sharp fa-solid fa-trash"></i>
+                Delete
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- task items -->
+
+        <!-- (click)="onTaskClick(task)" -->
+
+        <div class="task" *ngFor="let task of tasks" > 
+          <div class="task-text">
+            <p> {{task.title}}</p>
+          </div>
+          <!-- <button type="button" class="btn btn-success">
+            <i class="fa-thin fa-pen-to-square"></i>
+          </button>
+          <button type="button" class="btn btn-danger">
+            <i class="fa-sharp fa-solid fa-trash"></i>
+          </button> -->
+        </div>
+        <!-- <h5 class="title " > There are no tasks here ! Click the add button to create a new task  </h5> -->
+        <!-- button to add a new task to the selected task list -->
+        <button class="btn btn-primary my-5"  [routerLink]= "['./new-task']"   > Add task  </button>
+      </div>
+      <div  >
+        <!-- <h4 class="title"> Please Select a list  </h4> -->
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>

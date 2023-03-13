@@ -1,0 +1,14 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="../">
+      <img src="https://images.pexels.com/photos/3299/postit-scrabble-to-do.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+      &nbsp;
+      Task Manager
+    </a>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item" *ngIf="shouldDisplaySignOut()">
+        <a class="nav-link" routerLink="/">Sign Out</a>
+      </li>
+    </ul>
+  </div>
+</nav>

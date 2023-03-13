@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+     flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 700px;
+ 
+    margin: 90px 300px 50px 300px; 
+ 
+    
+  }
+
+  .modal-box{
+    min-height: 200px;
+    width: 100% ;
+    max-width: 580px;
+    background: white;
+    border-radius: 5px;
+    padding: 35px;
+  }
+  

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="modal-box">
+
+        <h1 class="title">
+           Edit a list
+        </h1>
+
+        
+            <input #listTitleInput class="form-control me-2 bg-light" type="search" placeholder="Enter list Name" aria-label="Search">
+            <!-- <button class="btn btn-outline-danger" type="submit">Create</button> -->
+
+
+            <div class="d-grid gap-2 d-md-block my-4"> 
+                <button class="btn btn-success mx-2" type="button" (click)="UpdateList(listTitleInput.value)" >Edit</button>
+                <button class="btn btn-light mx-2" type="button" routerLink="../">Cancel</button>
+              </div>
+         
+
+
+          <!-- <button type="button" class="btn btn-primary my-4" routerLink="/">Go back</button> -->
+
+    </div>
+</div>

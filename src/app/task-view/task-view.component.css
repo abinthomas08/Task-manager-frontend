@@ -1,0 +1,178 @@
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .center-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 700px;
+   
+    margin: 90px 300px 50px 300px;
+    
+  }
+  
+  
+  .task-list, .task-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+  
+    height: 500px;
+    
+  }
+  
+  .task-list {
+    width: 35%;
+    margin-right: 20px;
+   
+    background-color: white;
+    margin-left: 20px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin-right: 5px;
+  }
+  
+  .task-messages {
+  
+    width: 65%;
+    
+    background-color:beige;
+    margin-right: 20px ;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-left: 5px;
+    
+    
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    margin-top: 8px;
+    
+    
+  }
+  
+  .lsit-menu{
+  
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    flex-grow: 1;
+  
+  
+  
+  }
+  
+  .list-menu-items{
+    display: flex;
+  
+    align-items: center;
+    padding: 10px 15px ;
+    border-radius: 5px;
+    width: 100%;
+    color: #5f5f5f;
+    margin-bottom: 5px;
+    align-self: hover;
+  
+  
+  }
+  
+  .list-menu-items:hover {
+    background-color: #eee; /* change the background color on hover */
+    cursor: pointer; /* change the cursor to a hand pointer on hover */
+    
+  }
+  
+  .list-menu-items:active {
+    background-color: #cff8ef; /* change the background color when the element is active */
+    color: darkgreen; /* change the text color when the element is active */
+  
+  }
+  
+  
+  .task{
+    background: white;
+    padding: 10px 15px  ;
+    border-radius: 5px;
+    margin-top: 10px;
+   
+  }
+  .task:hover{
+    box-shadow: 0 0 0 5px black;
+    transition: box-shadow 0.2s ease ;
+    
+  
+  }
+  
+  .task:active{
+  
+    transform: scale(0.95);
+    
+  }
+  
+  
+  
+  
+  .is-active{
+    background-color: #cff8ef;
+    color: red;
+  }
+  
+  
+  .completed{
+  
+    text-decoration: line-through;
+    opacity: 0.8;
+  
+  }
+  
+  .register-link a {
+    color: #ff6b6b;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .form {
+      padding: 20px;
+      border-radius: 0;
+    }
+    
+  
+    
+    h2 {
+      font-size: 20px;
+    }
+    
+    input[type="email"], input[type="password"] {
+      font-size: 14px;
+    }
+    
+    button[type="submit"] {
+      font-size: 14px;
+    }
+  }
+  
+  .title{
+  
+    font-size: 20px;
+    color: #786 ;
+  
+  }
+  
+  
+  

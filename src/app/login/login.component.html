@@ -1,0 +1,38 @@
+<!--header-->
+<app-header></app-header>
+
+
+<!--login-->
+<div class="login-page">
+    
+        <div class="form">
+          
+          <h2>Log in to your account</h2>
+          <form  (ngSubmit)="login()"  [formGroup]="loginForm" class="login-form"  >
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input formControlName="email" name="email" type="text"       />
+            </div>
+            <!--Innvalid email-->
+            <div *ngIf="this.loginForm.get('email')?.errors&&this.loginForm.get('email')?.touched"
+             class="text-danger mb-2">Invalid Email Adress</div>
+
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input formControlName="pswd"   name="pswd"  type="password"     />
+            </div>
+
+             <!--Innvalid password-->
+             <div *ngIf="this.loginForm.get('pswd')?.errors&&this.loginForm.get('pswd')?.touched"
+             class="text-danger mb-2">Invalid Password</div>
+
+    
+            <button  type="submit"  >
+                Log in
+    
+            </button>
+          </form>
+          <p class="register-link">New User? <a routerLink="/register">Sign Up now  </a></p>
+        </div>
+    
+  </div>
